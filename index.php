@@ -1,12 +1,3 @@
-<?php
-$dbname="if0_38311581_sogo";
-$dbuser="if0_38311581";
-$dbhost="sql107.infinityfree.com";
-$dbpass="jC7wXSdh1Cs51zW";
-
-$conn= mysqli_connect ($dbhost , $dbuser, $dbpass , $dbname);
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -147,23 +138,4 @@ $conn= mysqli_connect ($dbhost , $dbuser, $dbpass , $dbname);
         </div>
     </div>
 </body>
-
-<?php
-
-
-
-
-if(isset ($_POST['registro'])){
-    $usuarios = $_POST['usuario'];
-    $old_password = $_POST['contrasena'];
-    $password_1 = $_POST['contrasena1'];
-    $password2 = $_POST['contrasena2'];
-    
-    $insertdatos = "INSERT INTO `sogo`(`usuarios`, `old_password`, `password_1`, `password2`) 
-    VALUES ('$usuarios','$old_password','$password_1','$password2')";
-
-    $ejecutar = mysqli_query ($conn, $insertdatos);
-}
-
-?>
 </html>
